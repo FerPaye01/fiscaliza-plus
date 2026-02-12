@@ -1742,6 +1742,76 @@ body {
     box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
 }
 
+/* V3: Resumen de Agentes en Analista */
+.agentes-resumen {
+    margin-bottom: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.agentes-resumen h4 {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agentes-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.agente-mini {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+}
+
+.agente-mini:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.agente-mini.rojo {
+    border-color: rgba(227, 6, 19, 0.3);
+    background: rgba(227, 6, 19, 0.05);
+}
+
+.agente-mini.naranja {
+    border-color: rgba(255, 152, 0, 0.3);
+    background: rgba(255, 152, 0, 0.05);
+}
+
+.agente-mini.verde {
+    border-color: rgba(0, 255, 157, 0.1);
+}
+
+.agente-mini-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.agente-mini-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+}
+
 /* ═══════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════ */

@@ -615,7 +615,7 @@ function VistaFiscalizador({ agentes, reglasAprobadas }) {
 // ═══════════════════════════════════════════
 function VistaAnalista({ agentes, reglas, red, onAprobarRegla }) {
     // Estado local para manejar aprobaciones sin mutar prop
-    const [reglasLocales, setReglasLocales] = useState([])
+    const [reglasLocales, setReglasLocales] = useState(reglas || [])
     const [analisis, setAnalisis] = useState({})
     const [searchQuery, setSearchQuery] = useState('')
     const [searchResult, setSearchResult] = useState(null)
@@ -662,6 +662,31 @@ function VistaAnalista({ agentes, reglas, red, onAprobarRegla }) {
                     <span className="bucle-flecha">→</span>
                     <div className="bucle-paso"><span className="bucle-num">4</span><span>Humano aprueba/rechaza</span></div>
                 </div>
+
+                {/* Resumen de Agentes Analizados — Datos de Ingesta */}
+                {agentes && agentes.length > 0 && (
+                    <div className="agentes-resumen">
+                        <h4>📋 Agentes Analizados ({agentes.length} de la ingesta)</h4>
+                        <div className="agentes-mini-grid">
+                            {agentes.map(a => (
+                                <div key={a.id} className={`agente-mini ${a.nivelAlerta}`}>
+                                    <div className="agente-mini-head">
+                                        <span className={`dot ${a.nivelAlerta} ${a.nivelAlerta !== 'verde' ? 'pulse' : ''}`}></span>
+                                        <strong>{a.nombre}</strong>
+                                    </div>
+                                    <div className="agente-mini-data">
+                                        <span>RUC: {a.ruc}</span>
+                                        <span>Precio: S/{a.precioGasohol90}</span>
+                                        <span>Δ {a.diferencialPrecio}%</span>
+                                        <span>Sanciones: {a.historialSanciones.length}</span>
+                                        <span>Score: {a.scoreReincidencia?.toFixed(2) || '0.00'}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 {reglasLocales.length === 0 && <div className="empty-state">No hay nuevas reglas propuestas.</div>}
                 {reglasLocales.map(regla => (
                     <div key={regla.id} className={`regla-card ${regla.estado}`}>

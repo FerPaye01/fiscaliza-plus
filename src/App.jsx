@@ -639,12 +639,29 @@ function VistaAnalista({ agentes, reglas, red, onAprobarRegla }) {
         setSearchResult(res)
     }
 
-    // Layout simple circular para el grafo dinámico
-    const getCoords = (index, total) => {
-        if (total === 1) return [200, 150]
-        const angle = (index / total) * 2 * Math.PI
-        return [200 + 100 * Math.cos(angle), 150 + 100 * Math.sin(angle)]
-    }
+    // Memoize coordinates to prevent jitter on re-renders
+    const graphNodes = React.useMemo(() => {
+        if (!red || !red.actores || red.actores.length === 0) return []
+
+        // Find center node (Persona or first node)
+        const centerNode = red.actores.find(a => a.tipo === 'persona') || red.actores[0]
+        const satellites = red.actores.filter(a => a.id !== centerNode.id)
+
+        // Center position
+        const nodes = [{ ...centerNode, x: 200, y: 150 }]
+
+        // Satellites in a circle
+        satellites.forEach((node, i) => {
+            const angle = (i / satellites.length) * 2 * Math.PI - (Math.PI / 2) // Start top
+            const radius = 90
+            nodes.push({
+                ...node,
+                x: 200 + radius * Math.cos(angle),
+                y: 150 + radius * Math.sin(angle)
+            })
+        })
+        return nodes
+    }, [red])
 
     return (
         <div className="vista-analista">

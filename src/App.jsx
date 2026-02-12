@@ -68,10 +68,13 @@ function PantallaInicio({ onSelect, onIngesta }) {
     return (
         <div className="inicio-container">
             <div className="inicio-header">
-                <h1 className="inicio-title">OSINERGMIN</h1>
-                <p className="inicio-subtitle">Sistema de Inteligencia Artificial Continua</p>
+                <h1 className="inicio-title">
+                    <span className="logo-fiscali">FISCALI</span><span className="logo-za">ZA</span><span className="logo-plus">+</span>
+                </h1>
+                <p className="inicio-subtitle">Plataforma de Aprendizaje y Prevención Fiscalizadora</p>
+                <p className="inicio-osinergmin">para OSINERGMIN</p>
                 <p className="inicio-desc">
-                    Plataforma de <strong>Nested Learning</strong> que ingesta datos en tiempo real de Facilito,
+                    Plataforma de <a href="https://arxiv.org/pdf/2512.24695" target="_blank" rel="noopener noreferrer" className="nested-link">Nested Learning</a> que ingesta datos en tiempo real de Facilito,
                     SIGED y denuncias ciudadanas. El sistema actualiza automáticamente sus criterios de riesgo
                     ante nuevos patrones de fraude, y detecta reincidencia multiactor.
                 </p>

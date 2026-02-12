@@ -47,23 +47,65 @@ body {
 }
 
 .inicio-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    color: var(--primary);
     letter-spacing: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.inicio-title .logo-fiscali {
+    font-size: 3.5rem;
+}
+
+.inicio-title .logo-za {
+    font-size: 3.5rem;
+}
+
+.inicio-title .logo-plus {
+    font-size: 4rem;
 }
 
 .inicio-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 16px;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.inicio-osinergmin {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
 .inicio-desc {
     font-size: 0.85rem;
     color: var(--text-muted);
     line-height: 1.7;
+}
+
+.nested-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 210, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.nested-link:hover {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(0, 210, 255, 0.6);
+    text-decoration-color: var(--primary);
 }
 
 .inicio-desc strong {

@@ -1,0 +1,14 @@
+[
+    {
+        "EXPEDIENTE": "EXP-2024-01567",
+        "RUC": "20612345678",
+        "RAZON_SOCIAL": "Corporación Fuel Power S.A.",
+        "TIPO_INFRACCION": "Incumplimiento menor de rotulado",
+        "MULTA_UIT": 1,
+        "MULTA_SOLES": 4500,
+        "FECHA": "2024-09-05",
+        "ESTADO": "Ejecutada",
+        "RESOLUCION": "RES-2024-789",
+        "TIPO_PROC": "TUPA"
+    }
+]

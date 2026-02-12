@@ -1,0 +1,42 @@
+[
+    {
+        "ID": "TW-20260211-001",
+        "FUENTE": "Twitter/X",
+        "TEXTO": "El grifo de La Molina cobra S/18.50 pero en Facilito dice S/15. ¡ESTAFA! @OSINERGMIN",
+        "FECHA": "2026-02-11T04:30:00",
+        "UBICACION": "La Molina",
+        "SENTIMIENTO": "negativo"
+    },
+    {
+        "ID": "TW-20260211-002",
+        "FUENTE": "Twitter/X",
+        "TEXTO": "Fui a cargar gasolina en Comas y me dijeron que no hay stock. Llevan 3 días así.",
+        "FECHA": "2026-02-11T03:15:00",
+        "UBICACION": "Comas",
+        "SENTIMIENTO": "negativo"
+    },
+    {
+        "ID": "FB-20260210-001",
+        "FUENTE": "Facebook",
+        "TEXTO": "Cuidado con el grifo de la Av. Javier Prado, el combustible huele raro y rinde menos.",
+        "FECHA": "2026-02-10T18:00:00",
+        "UBICACION": "San Isidro",
+        "SENTIMIENTO": "negativo"
+    },
+    {
+        "ID": "LR-20260211-001",
+        "FUENTE": "Libro de Reclamaciones",
+        "TEXTO": "Diferencia de precio en panel vs. surtidor de S/2.00. Solicito investigación.",
+        "FECHA": "2026-02-11T01:00:00",
+        "UBICACION": "La Molina",
+        "SENTIMIENTO": "negativo"
+    },
+    {
+        "ID": "TW-20260211-003",
+        "FUENTE": "Twitter/X",
+        "TEXTO": "Grifo de Surco excelente servicio y precios justos 👍 #BuenServicio",
+        "FECHA": "2026-02-11T05:00:00",
+        "UBICACION": "Santiago de Surco",
+        "SENTIMIENTO": "positivo"
+    }
+]

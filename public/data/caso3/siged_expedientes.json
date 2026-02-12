@@ -1,0 +1,110 @@
+[
+    {
+        "EXPEDIENTE": "EXP-2024-00451",
+        "RUC": "20567891234",
+        "RAZON_SOCIAL": "Grifos del Norte E.I.R.L.",
+        "TIPO_INFRACCION": "Adulteración de combustible",
+        "MULTA_UIT": 10,
+        "MULTA_SOLES": 45000,
+        "FECHA": "2024-06-15",
+        "ESTADO": "Ejecutada",
+        "RESOLUCION": "RES-2024-312",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2023-01892",
+        "RUC": "20567891234",
+        "RAZON_SOCIAL": "Grifos del Norte E.I.R.L.",
+        "TIPO_INFRACCION": "Precio no publicado",
+        "MULTA_UIT": 3,
+        "MULTA_SOLES": 12000,
+        "FECHA": "2023-11-20",
+        "ESTADO": "Ejecutada",
+        "RESOLUCION": "RES-2023-987",
+        "TIPO_PROC": "TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2025-00201",
+        "RUC": "20567891234",
+        "RAZON_SOCIAL": "Grifos del Norte E.I.R.L.",
+        "TIPO_INFRACCION": "Venta de combustible adulterado - reincidencia",
+        "MULTA_UIT": 20,
+        "MULTA_SOLES": 90000,
+        "FECHA": "2025-02-01",
+        "ESTADO": "En investigación",
+        "RESOLUCION": "PENDIENTE",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2022-00234",
+        "RUC": "20999888777",
+        "RAZON_SOCIAL": "Combustibles Norte S.A.",
+        "TIPO_INFRACCION": "Venta sin licencia",
+        "MULTA_UIT": 18,
+        "MULTA_SOLES": 80000,
+        "FECHA": "2022-03-10",
+        "ESTADO": "Empresa liquidada",
+        "RESOLUCION": "RES-2022-156",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2025-00078",
+        "RUC": "20543219876",
+        "RAZON_SOCIAL": "Inversiones Mejía & Hijos",
+        "TIPO_INFRACCION": "Manipulación de surtidores",
+        "MULTA_UIT": 12,
+        "MULTA_SOLES": 55000,
+        "FECHA": "2025-01-28",
+        "ESTADO": "En apelación",
+        "RESOLUCION": "RES-2025-045",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2025-00102",
+        "RUC": "20543219876",
+        "RAZON_SOCIAL": "Inversiones Mejía & Hijos",
+        "TIPO_INFRACCION": "Sobreprecio sistemático (+35%)",
+        "MULTA_UIT": 15,
+        "MULTA_SOLES": 68000,
+        "FECHA": "2025-02-05",
+        "ESTADO": "En investigación",
+        "RESOLUCION": "PENDIENTE",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2024-01567",
+        "RUC": "20612345678",
+        "RAZON_SOCIAL": "Corporación Fuel Power S.A.",
+        "TIPO_INFRACCION": "Incumplimiento de seguridad",
+        "MULTA_UIT": 5,
+        "MULTA_SOLES": 25000,
+        "FECHA": "2024-09-05",
+        "ESTADO": "Ejecutada",
+        "RESOLUCION": "RES-2024-789",
+        "TIPO_PROC": "TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2025-00150",
+        "RUC": "20451234567",
+        "RAZON_SOCIAL": "Estación San Isidro S.A.C.",
+        "TIPO_INFRACCION": "Cobro diferenciado no declarado",
+        "MULTA_UIT": 8,
+        "MULTA_SOLES": 36000,
+        "FECHA": "2025-01-15",
+        "ESTADO": "En apelación",
+        "RESOLUCION": "RES-2025-033",
+        "TIPO_PROC": "NO TUPA"
+    },
+    {
+        "EXPEDIENTE": "EXP-2025-00180",
+        "RUC": "20698765432",
+        "RAZON_SOCIAL": "Servicentro El Rápido S.R.L.",
+        "TIPO_INFRACCION": "Surtidores descalibrados (+5%)",
+        "MULTA_UIT": 10,
+        "MULTA_SOLES": 45000,
+        "FECHA": "2025-02-08",
+        "ESTADO": "En investigación",
+        "RESOLUCION": "PENDIENTE",
+        "TIPO_PROC": "NO TUPA"
+    }
+]

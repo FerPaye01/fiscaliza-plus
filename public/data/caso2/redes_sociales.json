@@ -1,0 +1,18 @@
+[
+    {
+        "ID": "TW-20260211-001",
+        "FUENTE": "Twitter/X",
+        "TEXTO": "Buen servicio en el grifo de San Isidro, precios razonables y atención rápida 👍",
+        "FECHA": "2026-02-11T04:30:00",
+        "UBICACION": "San Isidro",
+        "SENTIMIENTO": "positivo"
+    },
+    {
+        "ID": "TW-20260211-002",
+        "FUENTE": "Twitter/X",
+        "TEXTO": "Grifo de Surco siempre puntual con sus precios. Recomendado #BuenServicio",
+        "FECHA": "2026-02-11T03:15:00",
+        "UBICACION": "Santiago de Surco",
+        "SENTIMIENTO": "positivo"
+    }
+]

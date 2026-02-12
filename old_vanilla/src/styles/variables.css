@@ -1,0 +1,57 @@
+/* e:/OSCAR/HACKATONES/osinergmin-dashboard/src/styles/variables.css */
+
+:root {
+  /* Osinergmin Official Palette + Modern Accents */
+  --primary: #003366;           /* Navy Blue Osinergmin */
+  --secondary: #E30613;         /* Red Osinergmin */
+  --accent: #00A3AD;           /* Teal Digital Accent */
+  
+  /* Status Colors */
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+
+  /* Backgrounds & Glassmorphism */
+  --bg-main: #f4f7f6;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --glass-blur: 10px;
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --text-on-primary: #ffffff;
+
+  /* Spacing (Scale for mobile first) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Reset Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}

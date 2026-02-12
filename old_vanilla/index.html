@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osinergmin | Dashboard de Inteligencia de Riesgos</title>
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <span class="logo-text">OSINERGMIN</span>
+                    <span class="logo-subtext">Inteligencia de Riesgo</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" id="nav-dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-label">Dashboard</span>
+                    </li>
+                    <li id="nav-risk-map">
+                        <span class="nav-icon">📍</span>
+                        <span class="nav-label">Mapa de Riesgo</span>
+                    </li>
+                    <li id="nav-alerts">
+                        <span class="nav-icon">🔔</span>
+                        <span class="nav-label">Alertas Predictivas</span>
+                    </li>
+                    <li id="nav-history">
+                        <span class="nav-icon">📜</span>
+                        <span class="nav-label">Historial Fiscal</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                    <div class="user-info">
+                        <p class="user-name">Analista Digital</p>
+                        <p class="user-role">Supervisión Técnica</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" id="global-search" placeholder="Buscar agente, grifo o empresa concessionaria...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="top-bar-actions">
+                    <button id="btn-sync" title="Sincronizar Datos">🔄</button>
+                    <div class="notification-dot"></div>
+                </div>
+            </header>
+
+            <section id="dynamic-content" class="content-wrapper">
+                <!-- Secciones se cargarán aquí mediante JS -->
+                <div class="welcome-header">
+                    <h1>Sistematización de Inteligencia Fiscalizadora</h1>
+                    <p>Transformando el conocimiento histórico en acciones preventivas.</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Cards de ejemplo -->
+                    <div class="card glass">
+                        <h3>Índice de Riesgo Global</h3>
+                        <div class="chart-placeholder"></div>
+                    </div>
+                    <div class="card glass alert-card">
+                        <h3>Alertas Críticas</h3>
+                        <p>3 Agentes con alta probabilidad de reincidencia detected.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>

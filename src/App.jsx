@@ -484,7 +484,10 @@ function NavBar({ vista, onCambiar, onReset, reglasAprobadas }) {
     ]
     return (
         <nav className="navbar">
-            <div className="nav-logo" onClick={onReset} title="Regresar al inicio y limpiar todo">OSINERGMIN NL</div>
+            <div className="nav-logo" onClick={onReset} title="Regresar al inicio y limpiar todo">
+                <span className="logo-fiscali">FISCALI</span><span className="logo-za">ZA</span><span className="logo-plus">+</span>
+                <span className="logo-sub">Plataforma de Aprendizaje y Prevención Fiscalizadora</span>
+            </div>
             <div className="nav-tabs">
                 {vistas.map(v => (
                     <button key={v.id} className={`nav-tab ${vista === v.id ? 'active' : ''}`}

@@ -727,31 +727,37 @@ function VistaAnalista({ agentes, reglas, red, onAprobarRegla }) {
                 </div>
                 <div className="grafo-container">
                     <svg viewBox="0 0 400 300" className="grafo-svg">
-                        {red && red.actores.map((actor, i) => {
-                            const [x, y] = getCoords(i, red.actores.length)
-                            actor.x = x; actor.y = y // Guardar coords para lineas
-                            return null // Solo calcular
-                        })}
+                        {/* Conexiones */}
                         {red && red.conexiones.map((c, i) => {
-                            const origen = red.actores.find(a => a.id === c.origen)
-                            const destino = red.actores.find(a => a.id === c.destino)
+                            const origen = graphNodes.find(n => n.id === c.origen)
+                            const destino = graphNodes.find(n => n.id === c.destino)
                             if (!origen || !destino) return null
-                            return <line key={i} x1={origen.x} y1={origen.y} x2={destino.x} y2={destino.y}
-                                stroke="rgba(0,210,255,0.3)" strokeWidth="1" strokeDasharray="4" />
-                        })}
-                        {red && red.actores.map(actor => {
-                            const color = actor.tipo === 'persona' ? '#00d2ff' : actor.estado === 'liquidada' ? '#e30613' : '#00ff9d'
                             return (
-                                <g key={actor.id}>
-                                    <circle cx={actor.x} cy={actor.y} r={actor.tipo === 'persona' ? 8 : 10} fill={color} className="node-pulse" />
-                                    <text x={actor.x} y={actor.y + 20} textAnchor="middle" fill="#aaa" fontSize="8">{actor.nombre}</text>
-                                    {actor.estado === 'liquidada' && <text x={actor.x} y={actor.y + 30} textAnchor="middle" fill="#e30613" fontSize="7">⚠ LIQUIDADA</text>}
+                                <g key={i}>
+                                    <line x1={origen.x} y1={origen.y} x2={destino.x} y2={destino.y}
+                                        stroke="rgba(0,210,255,0.2)" strokeWidth="1" strokeDasharray="4" />
+                                    <circle cx={(origen.x + destino.x) / 2} cy={(origen.y + destino.y) / 2} r="2" fill="rgba(0,210,255,0.5)">
+                                        <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+                                    </circle>
+                                </g>
+                            )
+                        })}
+                        {/* Nodos */}
+                        {graphNodes.map(actor => {
+                            const color = actor.tipo === 'persona' ? '#00d2ff' : actor.estado === 'liquidada' ? '#e30613' : '#00ff9d'
+                            const radius = actor.tipo === 'persona' ? 12 : 8
+                            return (
+                                <g key={actor.id} className="grafo-node-group">
+                                    <circle cx={actor.x} cy={actor.y} r={radius + 4} fill={color} opacity="0.2" className={actor.tipo === 'persona' ? 'pulse-slow' : ''} />
+                                    <circle cx={actor.x} cy={actor.y} r={radius} fill={color} />
+                                    <text x={actor.x} y={actor.y + 25} textAnchor="middle" fill="#ccc" fontSize="9" fontWeight="bold">{actor.nombre}</text>
+                                    {actor.estado === 'liquidada' && <text x={actor.x} y={actor.y + 36} textAnchor="middle" fill="#e30613" fontSize="8" fontWeight="bold">⚠ LIQUIDADA</text>}
                                 </g>
                             )
                         })}
                     </svg>
                     <div className="grafo-leyenda">
-                        <span><span className="dot-sm blue" /> Persona</span>
+                        <span><span className="dot-sm blue" /> Persona (Eje)</span>
                         <span><span className="dot-sm green" /> Empresa Activa</span>
                         <span><span className="dot-sm red" /> Empresa Liquidada</span>
                     </div>

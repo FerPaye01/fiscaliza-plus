@@ -1842,3 +1842,24 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* V3: Grafo Animaciones */
+@keyframes pulse-slow {
+    0% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.5); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.2; }
+}
+
+.pulse-slow {
+    animation: pulse-slow 3s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.grafo-node-group {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.grafo-node-group:hover circle {
+    stroke: #fff;
+    stroke-width: 1px;
+}
